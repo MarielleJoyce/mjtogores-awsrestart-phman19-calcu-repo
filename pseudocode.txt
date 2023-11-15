@@ -1,0 +1,46 @@
+BEGIN
+
+Display"Select operation"
+Display"Press 1 for sum"
+Display"Press 2 for sub"
+Display"Press 3 for mul"
+Display"Press 4 for div"
+store value of input in operation
+
+if input is 1 Then
+    Display "Input first number"
+    Store value in num1
+    Display "Input second number"
+    store value in num2
+    Determine SUM = num1 + num2
+    Display SUM
+
+elif input is 2 THEN
+    Display "Input first number"
+    Store value in num1
+    Display "Input second number"
+    store value in num2
+    Determine DIFFERENCE = num1 - num2
+    Display DIFFERENCE
+
+elif input is 3 THEN
+    Display "Input first number"
+    Store value in num1
+    Display "Input second number"
+    store value in num2
+    Determine PRODUCT = num1 * num2
+    Display PRODUCT
+
+elif input is 4 THEN
+    Display "Input first number"
+    Store value in num1
+    Display "Input second number"
+    store value in num2
+    Determine QUOTIENT= num1 / num2
+    Display QUOTIENT
+
+ELSE Display"Invalid Entry"
+
+ENDIF
+
+STOP
