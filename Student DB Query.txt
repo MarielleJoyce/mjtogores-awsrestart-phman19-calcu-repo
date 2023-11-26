@@ -1,0 +1,35 @@
+INSERT INTO Students
+VALUES (1234,"Marielle","Togores","09457415511","1997-08-29","Freshmen","Auditor","2023-11-24");
+INSERT INTO Students
+VALUES (1235,"James","Ang","09392049201","1996-02-05","Freshmen","Auditor","2023-11-24");
+INSERT INTO Students
+VALUES (1236,"Charlotte","Lopez","09568301821","1996-05-25","Freshmen","Auditor","2023-11-24");
+
+INSERT INTO Courses
+VALUES (1,"Bachelor of Information Technology","Auditor",'2023-11-24','20,000');
+INSERT INTO Courses
+VALUES (2,"Bachelor of Education","Auditor",'2023-11-24','25,000');
+INSERT INTO Courses
+VALUES (3,"Bachelor of Business Administration","Auditor",'2023-11-24','25,000');
+
+ALTER TABLE Enrollments
+ADD CONSTRAINT FK_Student_ID
+FOREIGN KEY(Student_ID) REFERENCES Students(Student_ID);
+
+ALTER TABLE Enrollments
+ADD CONSTRAINT FK_Course_ID
+FOREIGN KEY(Course_ID) REFERENCES Courses(Course_ID);
+
+
+INSERT INTO Enrollments
+VALUES (1,1234,1,'Bachelor of Information Technology','2023-11-24','1.50','Auditor','2023-11-24');
+INSERT INTO Enrollments
+VALUES (2,1235,2,'Bachelor of Education','2023-11-24','1.50','Auditor','2023-11-24');
+INSERT INTO Enrollments
+VALUES (3,1236,3,'Bachelor of Business Administration','2023-11-24','1.75','Auditor','2023-11-24');
+
+select * from Enrollments;
+
+SELECT Final_Grade
+FROM Enrollments
+ORDER BY Final_Grade

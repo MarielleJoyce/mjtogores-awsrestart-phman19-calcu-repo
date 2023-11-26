@@ -1,0 +1,31 @@
+CREATE TABLE Students(
+    Student_ID INT NOT NULL AUTO_INCREMENT,
+    First_Name VARCHAR(255) NULL,
+    Last_Name VARCHAR(255)  NOT NULl,
+    Phone VARCHAR(255) NULL,
+  	Date_Of_Birth DATE,
+  	Student_YR VARCHAR(255) NOT NULL,
+  	Created_By VARCHAR(255) NOT NULL,
+  	Created_Date DATE,
+  	PRIMARY KEY(Student_ID)
+);
+
+CREATE TABLE Courses (
+   	Course_ID INT NOT NULL AUTO_INCREMENT,
+  	Description VARCHAR(255) NOT NULL,
+  	Created_By VARCHAR(255) NOT NULL,
+  	Created_Date DATE,
+  	Cost VARCHAR(255) NOT NULL,
+  	PRIMARY KEY(Course_ID));
+    
+    CREATE TABLE Enrollments (
+    Enrolled_ID INT NOT NULL AUTO_INCREMENT,
+  	Student_ID INT,
+  	Course_ID INT,
+    Description varchar(255) NOT NULL,
+  	Enroll_Date DATE,
+  	Final_Grade varchar(255) NOT NULL,
+  	Created_By VARCHAR(255) NOT NULL,
+  	Created_Date DATE NOT NULL,
+  PRIMARY KEY(Enrolled_ID)
+);
